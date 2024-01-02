@@ -16,6 +16,11 @@ export default function LoginScreen({ navigation }) {
         console.log(password);
         navigation.navigate("Home")
     }
+    function cadastrar() {
+        setTimeout(() => {
+            navigation.navigate("Cadastro")
+        }, 5000);
+    }
 
     return (
         <>
@@ -25,11 +30,11 @@ export default function LoginScreen({ navigation }) {
                     <Input
                         leftIcon={
                             <Icon
-                            name='account'
-                            size={24}
-                            color='#fff'
-                            style={{ paddingRight: 10 }}
-                        />
+                                name='account'
+                                size={24}
+                                color='#fff'
+                                style={{ paddingRight: 10 }}
+                            />
                         }
                         placeholder='E-mail'
                         keyboardType='email-address'
@@ -39,11 +44,11 @@ export default function LoginScreen({ navigation }) {
                     <Input
                         leftIcon={
                             <Icon
-                            name='account-key'
-                            size={24}
-                            color='#fff'
-                            style={{ paddingRight: 10 }}
-                        />   
+                                name='account-key'
+                                size={24}
+                                color='#fff'
+                                style={{ paddingRight: 10 }}
+                            />
                         }
                         placeholder='Senha'
                         keyboardType='default'
@@ -74,11 +79,9 @@ export default function LoginScreen({ navigation }) {
                     >{'\t'}
                         Logar
                     </Button>
-                    {/* <Text style={LocalStyle.textStyle}>Ainda não é cadastrado? Clique */}
-                        <TouchableOpacity onPress={() => navigation.navigate("Cadastro")} style={LocalStyle.link} >
-                            <Text style={LocalStyle.textStyleLink}>Ainda não é cadastrado? Clique aqui.</Text>
-                        </TouchableOpacity>
-                    {/* </Text> */}
+                    <TouchableOpacity onPress={() => cadastrar()} style={LocalStyle.link} >
+                        <Text style={LocalStyle.textStyleLink}>Ainda não é cadastrado? Clique aqui.</Text>
+                    </TouchableOpacity>
                 </View>
             </ImageBackground >
         </>
@@ -90,12 +93,12 @@ const LocalStyle = StyleSheet.create({
         color: "#fff",
     },
     link: {
-        marginTop:20,
+        marginTop: 20,
         width: "100%",
-        color: "#fff",        
+        color: "#fff",
     },
-    textStyleLink: {                
-        textAlign:"center",
+    textStyleLink: {
+        textAlign: "center",
         color: "#fff",
         fontSize: 16,
     }

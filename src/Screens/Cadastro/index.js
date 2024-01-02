@@ -12,13 +12,15 @@ export default function CadastroScreen({navigation}) {
     const [password, setPassword] = useState(null);
     const bg = require("../../Assets/wallpaper.png");
 
-    const entrar = () => {
-        console.log("Entrou");
-        console.log(nome);        
-        console.log(email);
-        console.log(telefone);
-        console.log(password);
-    }
+    const cadastro = () => {
+        setTimeout(() => {
+            console.log("Entrou");
+            console.log(nome);        
+            console.log(email);
+            console.log(telefone);
+            console.log(password);            
+        }, 3000);
+        }
 
     return (
         <>
@@ -101,7 +103,7 @@ export default function CadastroScreen({navigation}) {
                             marginVertical: 10,
                         }}
                         icon={{ name: "check", color: "white", size: 20, type: 'font-awesome', }}
-                        onPress={() => entrar()}
+                        onPress={() => cadastro()}
                     >{'\t'}
                         Cadastrar
                     </Button>

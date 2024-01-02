@@ -9,11 +9,13 @@ const Styles =  StyleSheet.create({
     titleLogin:{
         fontWeight:"bold",
         color:"#fff",
+        marginBottom:40,
     },
        container: {
         flex: 1,        
+        top:50,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center',        
         padding: 15,
       },
       textStyle: {
